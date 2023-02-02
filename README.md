@@ -4,7 +4,7 @@
 ## Caveats
 - `Java` and `feh` are required to be installed in order to use this plugin.
 - `plantuml` is optional to be installed or used in jar format.
-- Recommended for Plant UML syntax highlighting [nvim-poe colorscheme](https://github.com/javi-7/nvim-poe)
+- Recommended for Plant UML syntax highlighting [nvim-nyctovim colorscheme](https://github.com/javi-7/nvim-nyctovim)
 - This plugin has been developed on and for Linux following open source philosophy.
 
 ## Installation
@@ -14,7 +14,7 @@ Plug 'javi-7/nvim-modelizer'
 Plug 'javi-7/nvim-osfa'
 
 " Optional for puml syntax highlighting:
-Plug 'javi-7/nvim-spaschemes'
+Plug 'javi-7/nvim-nyctovim'
 ```
 `Packer`
 ```lua
@@ -24,7 +24,7 @@ use {
   }
 
 -- Optional for puml syntax highlighting:
-use 'javi-7/nvim-spaschemes'
+use 'javi-7/nvim-nyctovim'
 ```
 
 ## Configuration
@@ -60,7 +60,7 @@ require'modelizer'.setup{
 
 <img src="https://github.com/javi-7/img/blob/master/nvim-modelizer/modelizer.gif?raw=true" alt="modelizer" style="width:600px;"/>
 
-**NOTE:** The colorscheme **raven** from [nvim-poe](https://github.com/javi-7/nvim-poe) is used in this image.
+**NOTE:** The colorscheme **nox** from [nvim-nyctovim](https://github.com/javi-7/nvim-nyctovim) is used in this image.
 
 ## Support
 - [Paypal](https://www.paypal.com/donate/?hosted_button_id=DT5ZGHRJKYJ8C)
