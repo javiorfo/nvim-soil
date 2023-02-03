@@ -1,9 +1,9 @@
 -- #########################################################
 -- # Maintainer:  Javier Orfo                              #
--- # URL:         https://github.com/javi-7/nvim-modelizer #
+-- # URL:         https://github.com/javio7/nvim-modelizer #
 -- #########################################################
 
-local Logger = require'modelizer.utils'.logger
+local Logger = require'modelizer.logger':new("Modelizer")
 local settings = require'modelizer'.DEFAULTS
 local M = {}
 

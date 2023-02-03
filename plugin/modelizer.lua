@@ -1,6 +1,6 @@
 -- #########################################################
 -- # Maintainer:  Javier Orfo                              #
--- # URL:         https://github.com/javi-7/nvim-modelizer #
+-- # URL:         https://github.com/javio7/nvim-modelizer #
 -- #########################################################
 
 if vim.g.modelizer then

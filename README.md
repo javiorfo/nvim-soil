@@ -4,27 +4,23 @@
 ## Caveats
 - `Java` and `feh` are required to be installed in order to use this plugin.
 - `plantuml` is optional to be installed or used in jar format.
-- Recommended for Plant UML syntax highlighting [nvim-nyctovim colorscheme](https://github.com/javi-7/nvim-nyctovim)
+- Recommended for Plant UML syntax highlighting [nvim-nyctovim colorscheme](https://github.com/javio7/nvim-nyctovim)
 - This plugin has been developed on and for Linux following open source philosophy.
 
 ## Installation
 `Vim Plug`
 ```vim
-Plug 'javi-7/nvim-modelizer'
-Plug 'javi-7/nvim-osfa'
+Plug 'javio7/nvim-modelizer'
 
 " Optional for puml syntax highlighting:
-Plug 'javi-7/nvim-nyctovim'
+Plug 'javio7/nvim-nyctovim'
 ```
 `Packer`
 ```lua
-use {
-    'javi-7/nvim-modelizer'
-    requires = {{ 'javi-7/nvim-osfa' }}
-  }
+use 'javio7/nvim-modelizer'
 
 -- Optional for puml syntax highlighting:
-use 'javi-7/nvim-nyctovim'
+use 'javio7/nvim-nyctovim'
 ```
 
 ## Configuration
@@ -58,9 +54,9 @@ require'modelizer'.setup{
 ## Screenshots
 ### Simple use
 
-<img src="https://github.com/javi-7/img/blob/master/nvim-modelizer/modelizer.gif?raw=true" alt="modelizer" style="width:600px;"/>
+<img src="https://github.com/javio7/img/blob/master/nvim-modelizer/modelizer.gif?raw=true" alt="modelizer" style="width:600px;"/>
 
-**NOTE:** The colorscheme **nox** from [nvim-nyctovim](https://github.com/javi-7/nvim-nyctovim) is used in this image.
+**NOTE:** The colorscheme **nox** from [nvim-nyctovim](https://github.com/javio7/nvim-nyctovim) is used in this image.
 
 ## Support
 - [Paypal](https://www.paypal.com/donate/?hosted_button_id=DT5ZGHRJKYJ8C)
