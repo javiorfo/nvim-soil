@@ -1,10 +1,10 @@
--- #########################################################
--- # Maintainer:  Javier Orfo                              #
--- # URL:         https://github.com/javio7/nvim-modelizer #
--- #########################################################
+-- ####################################################
+-- # Maintainer:  Javier Orfo                         #
+-- # URL:         https://github.com/javio7/nvim-soil #
+-- ####################################################
 
-local Logger = require'modelizer.logger':new("Modelizer")
-local settings = require'modelizer'.DEFAULTS
+local Logger = require'soil.logger':new("Soil")
+local settings = require'soil'.DEFAULTS
 local M = {}
 
 local function validate()

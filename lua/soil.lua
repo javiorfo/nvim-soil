@@ -1,9 +1,9 @@
--- #########################################################
--- # Maintainer:  Javier Orfo                              #
--- # URL:         https://github.com/javio7/nvim-modelizer #
--- #########################################################
+-- ####################################################
+-- # Maintainer:  Javier Orfo                         #
+-- # URL:         https://github.com/javio7/nvim-soil #
+-- ####################################################
 
-local Logger = require'modelizer.logger':new("Modelizer")
+local Logger = require'soil.logger':new("Soil")
 local M = {}
 
 M.DEFAULTS = {

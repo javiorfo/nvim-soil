@@ -1,5 +1,5 @@
-# nvim-modelizer
-*nvim-modelizer is a minimal plugin written in Lua for Plant UML.*
+# nvim-soil
+*nvim-soil is a minimal plugin written in Lua for Plant UML (a soil for planting UML).*
 
 ## Caveats
 - `Java` and `feh` are required to be installed in order to use this plugin.
@@ -10,14 +10,14 @@
 ## Installation
 `Vim Plug`
 ```vim
-Plug 'javio7/nvim-modelizer'
+Plug 'javio7/nvim-soil'
 
 " Optional for puml syntax highlighting:
 Plug 'javio7/nvim-nyctovim'
 ```
 `Packer`
 ```lua
-use 'javio7/nvim-modelizer'
+use 'javio7/nvim-soil'
 
 -- Optional for puml syntax highlighting:
 use 'javio7/nvim-nyctovim'
@@ -32,7 +32,7 @@ use 'javio7/nvim-nyctovim'
 - The default Plant UML **darkmode** is set to **false**. 
 - Optional configuration in *init.vim* or *init.lua*:
 ```lua
-require'modelizer'.setup{ 
+require'soil'.setup{ 
     -- If you want to use Plant UML jar version instead of the install version
     puml_jar = "/path/to/plantuml.jar",
     
@@ -47,14 +47,14 @@ require'modelizer'.setup{
 ```
 
 ## Usage
-- Open any yourfile.plantuml, yourfile.pu or yourfile.puml which you want to process and use `:ModelizerRun` Neovim command line to generate and open yourfile.png with graphical output. Press `q` to quit the image viewer.
-- Everytime you update a Plant UML file and run `:ModelizerRun`, you'll get an updated image.
+- Open any yourfile.plantuml, yourfile.pu or yourfile.puml which you want to process and use `:Soil` Neovim command line to generate and open yourfile.png with graphical output. Press `q` to quit the image viewer.
+- Everytime you update a Plant UML file and run `:Soil`, you'll get an updated image.
 - The generated image is saved in the same location that your Plant UML file.
 
 ## Screenshots
 ### Simple use
 
-<img src="https://github.com/javio7/img/blob/master/nvim-modelizer/modelizer.gif?raw=true" alt="modelizer" style="width:600px;"/>
+<img src="https://github.com/javio7/img/blob/master/nvim-soil/soil.gif?raw=true" alt="soil" style="width:600px;"/>
 
 **NOTE:** The colorscheme **nox** from [nvim-nyctovim](https://github.com/javio7/nvim-nyctovim) is used in this image.
 

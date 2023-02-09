@@ -3,4 +3,10 @@
 -- # URL:         https://github.com/javio7/nvim-soil #
 -- ####################################################
 
-vim.cmd[[autocmd BufRead,BufNewFile *.uml,*.pu,*.plantuml,*.puml set filetype=plantuml]]
+if vim.g.soil then
+  return
+end
+
+vim.g.soil = 1
+
+vim.api.nvim_create_user_command('Soil', 'lua require("soil.core").run()', {})
