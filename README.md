@@ -1,5 +1,5 @@
 # nvim-soil
-*nvim-soil is a minimal plugin written in Lua for Plant UML (a soil for planting UML).*
+*nvim-soil is a minimal plugin written in Lua for Plant UML **(soil for a Plant UML)**.*
 
 ## Caveats
 - `Java` and `feh` are required to be installed in order to use this plugin.
