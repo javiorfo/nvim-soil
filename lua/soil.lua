@@ -1,7 +1,7 @@
--- ####################################################
--- # Maintainer:  Javier Orfo                         #
--- # URL:         https://github.com/javio7/nvim-soil #
--- ####################################################
+-- ######################################################
+-- # Maintainer: Mr. Charkuils                          #
+-- # URL:        https://github.com/charkuils/nvim-soil #
+-- ######################################################
 
 local Logger = require'soil.logger':new("Soil")
 local M = {}
