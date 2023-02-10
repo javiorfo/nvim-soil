@@ -1,5 +1,5 @@
 # nvim-soil
-### Soil for a plant (UML)
+### :seedling: Soil for a plant (UML)
 *nvim-soil is a minimal plugin written in Lua for Plant UML.*
 
 ## Caveats
