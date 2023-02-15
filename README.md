@@ -59,6 +59,3 @@ require'soil'.setup{
 
 
 **NOTE:** The colorscheme **nox** from [nvim-nyctovim](https://github.com/charkuils/nvim-nyctovim) is used in this image.
-
-## Support
-- [Paypal](https://www.paypal.com/donate/?hosted_button_id=DT5ZGHRJKYJ8C)
