@@ -12,11 +12,11 @@ local function validate()
         Logger:warn("This is not a Plant UML file.")
         return false
     end
-    if not vim.fn.executable("java") then
+    if vim.fn.executable("java") == 0 then
         Logger:warn("java is required. Install it to use this plugin.")
         return false
     end
-    if not vim.fn.executable("feh") then
+    if vim.fn.executable("feh") == 0 then
         Logger:warn("feh is required. Install it to use this plugin.")
         return false
     end
