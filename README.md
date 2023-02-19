@@ -58,6 +58,3 @@ require'soil'.setup{
 <img src="https://github.com/charkuils/img/blob/master/nvim-soil/soil2.gif?raw=true" alt="soil" style="width:1000px;"/>
 
 **NOTE:** The colorscheme **nox** from [nvim-nyctovim](https://github.com/charkuils/nvim-nyctovim) is used in this image.
-
-### Support
-- [Binance](https://www.binance.com/en/my/wallet/account/payment/send): `Pay ID: 546639204`
