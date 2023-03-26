@@ -5,23 +5,23 @@
 ## Caveats
 - `Java` and `feh` are required to be installed in order to use this plugin.
 - `plantuml` is optional to be installed or used in jar format.
-- Recommended for Plant UML syntax highlighting [nvim-nyctovim colorscheme](https://github.com/javiorfo/nvim-nyctovim)
+- Recommended for Plant UML syntax highlighting [nvim-nyctovim colorscheme](https://github.com/systemmalt/nvim-nyctovim)
 - This plugin has been developed on and for Linux following open source philosophy.
 
 ## Installation
 `Vim Plug`
 ```vim
-Plug 'javiorfo/nvim-soil'
+Plug 'systemmalt/nvim-soil'
 
 " Optional for puml syntax highlighting:
-Plug 'javiorfo/nvim-nyctovim'
+Plug 'systemmalt/nvim-nyctovim'
 ```
 `Packer`
 ```lua
-use 'javiorfo/nvim-soil'
+use 'systemmalt/nvim-soil'
 
 -- Optional for puml syntax highlighting:
-use 'javiorfo/nvim-nyctovim'
+use 'systemmalt/nvim-nyctovim'
 ```
 
 ## Configuration
@@ -55,9 +55,6 @@ require'soil'.setup{
 ## Screenshots
 ### Simple use
 
-<img src="https://github.com/javiorfo/img/blob/master/nvim-soil/soil2.gif?raw=true" alt="soil" style="width:1000px;"/>
+<img src="https://github.com/systemmalt/img/blob/master/nvim-soil/soil2.gif?raw=true" alt="soil" style="width:1000px;"/>
 
-**NOTE:** The colorscheme **nox** from [nvim-nyctovim](https://github.com/javiorfo/nvim-nyctovim) is used in this image.
-
-### Support
-- [Paypal](https://www.paypal.com/donate/?hosted_button_id=9BFAD3RVEZNQ2)
+**NOTE:** The colorscheme **nox** from [nvim-nyctovim](https://github.com/systemmalt/nvim-nyctovim) is used in this image.
