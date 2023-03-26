@@ -1,6 +1,6 @@
--- #####################################################
--- # Maintainer: Javier Orfo                           #
--- # URL:        https://github.com/javiorfo/nvim-soil #
--- #####################################################
+-- #######################################################
+-- # Maintainer: System Malt                             #
+-- # URL:        https://github.com/systemmalt/nvim-soil #
+-- #######################################################
 
 vim.cmd[[autocmd BufRead,BufNewFile *.uml,*.pu,*.plantuml,*.puml set filetype=plantuml]]
