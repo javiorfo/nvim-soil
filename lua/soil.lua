@@ -8,10 +8,8 @@ local M = {}
 
 M.DEFAULTS = {
     image = {
-        bg = "black",
         darkmode = false,
-        format = "png",
-        size = { width = 1000, height = 600 }
+        format = "png"
     }
 }
 
@@ -21,14 +19,6 @@ function M.setup(opts)
     end
     if opts.image then
         local img = opts.image
-
-        if img.bg then
-            if type(img.bg) == "string" then
-                M.DEFAULTS.image.bg = img.bg
-            else
-                Logger:error("Setup Error: image.bg must be a string value.")
-            end
-        end
 
         if img.format then
             if img.format == "png" or img.format == "svg" then
@@ -43,25 +33,6 @@ function M.setup(opts)
                 M.DEFAULTS.image.darkmode = img.darkmode
             else
                 Logger:error("Setup Error: image.darkmode must be a boolean value.")
-            end
-        end
-
-        if img.size then
-            local size = img.size
-            if size.width and size.height then
-                if type(size.width) == "number" then
-                    M.DEFAULTS.image.size.width = size.width
-                else
-                    Logger:error("Setup Error: image.size.width must be a number value.")
-                end
-
-                if type(size.height) == "number" then
-                    M.DEFAULTS.image.size.height = size.height
-                else
-                    Logger:error("Setup Error: image.size.height must be a number value.")
-                end
-            else
-                Logger:warn("Setup Error: image.size.width or image.size.height does not exist.")
             end
         end
     end

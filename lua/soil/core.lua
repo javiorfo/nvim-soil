@@ -16,19 +16,18 @@ local function validate()
         Logger:warn("java is required. Install it to use this plugin.")
         return false
     end
-    if vim.fn.executable("feh") == 0 then
-        Logger:warn("feh is required. Install it to use this plugin.")
+    if vim.fn.executable("xsiv") == 0 then
+        Logger:warn("xsiv is required. Install it to use this plugin.")
         return false
     end
     return true
 end
 
-local function get_feh_command(file)
+local function get_image_command(file)
     vim.cmd("redraw")
     Logger:info(string.format("Image %s.%s generated!", file, settings.image.format))
-    local image_size = string.format("%sx%s", settings.image.size.width, settings.image.size.height)
     local image_file = string.format("%s.%s", file, settings.image.format)
-    return string.format("feh --scale-down -g %s --image-bg %s %s; echo $?", image_size, settings.image.bg, image_file)
+    return string.format("sxiv -b %s; echo $?", image_file)
 end
 
 local function execute_command(command)
@@ -60,7 +59,7 @@ function M.run()
            local puml_command = string.format("java -jar %s %s -t%s %s; echo $?", puml_jar, file_with_extension, format, darkmode)
            execute_command(puml_command)
        end
-       execute_command(get_feh_command(file))
+       execute_command(get_image_command(file))
     else
         Logger:warn("Install plantuml or download it from the official page and set it up with 'puml_jar' option.")
     end
