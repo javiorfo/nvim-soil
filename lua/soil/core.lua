@@ -16,8 +16,8 @@ local function validate()
         Logger:warn("java is required. Install it to use this plugin.")
         return false
     end
-    if vim.fn.executable("xsiv") == 0 then
-        Logger:warn("xsiv is required. Install it to use this plugin.")
+    if vim.fn.executable("sxiv") == 0 then
+        Logger:warn("sxiv is required. Install it to use this plugin.")
         return false
     end
     return true
