@@ -5,7 +5,7 @@
 ## Caveats
 - `Java` and `sxiv` are required to be installed in order to use this plugin.
 - `plantuml` is optional to be installed or used in jar format.
-- Recommended for Plant UML syntax highlighting [nvim-nyctovim colorscheme](https://github.com/javiorfo/nvim-nyctovim)
+- Recommended for Plant UML syntax highlighting [nvim-whisky colorscheme](https://github.com/javiorfo/nvim-whisky)
 - This plugin has been developed on and for Linux following open source philosophy.
 
 ## Installation
@@ -14,14 +14,14 @@
 Plug 'javiorfo/nvim-soil'
 
 " Optional for puml syntax highlighting:
-Plug 'javiorfo/nvim-nyctovim'
+Plug 'javiorfo/nvim-whisky'
 ```
 `Packer`
 ```lua
 use 'javiorfo/nvim-soil'
 
 -- Optional for puml syntax highlighting:
-use 'javiorfo/nvim-nyctovim'
+use 'javiorfo/nvim-whisky'
 ```
 
 ## Configuration
@@ -53,4 +53,4 @@ require'soil'.setup{
 
 <img src="https://github.com/javiorfo/img/blob/master/nvim-soil/soil2.gif?raw=true" alt="soil" style="width:1000px;"/>
 
-**NOTE:** The colorscheme **nox** from [nvim-nyctovim](https://github.com/javiorfo/nvim-nyctovim) is used in this image.
+**NOTE:** The colorscheme **blend** from [nvim-whisky](https://github.com/javiorfo/nvim-whisky) is used in this image.
