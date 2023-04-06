@@ -1,7 +1,7 @@
--- #####################################################
--- # Maintainer: Javier Orfo                           #
--- # URL:        https://github.com/javiorfo/nvim-soil #
--- #####################################################
+-- ######################################################
+-- # Maintainer: Javier Orfo                            #
+-- # URL:        https://github.com/whiskoder/nvim-soil #
+-- ######################################################
 
 if vim.g.soil then
   return
