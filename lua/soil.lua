@@ -1,6 +1,6 @@
 -- ######################################################
--- # Maintainer: Javier Orfo                            #
--- # URL:        https://github.com/whiskoder/nvim-soil #
+-- # Maintainer: Mr. Charkuils                          #
+-- # URL:        https://github.com/charkuils/nvim-soil #
 -- ######################################################
 
 local Logger = require'soil.logger':new("Soil")
