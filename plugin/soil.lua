@@ -1,8 +1,3 @@
--- ######################################################
--- # Maintainer: Mr. Charkuils                          #
--- # URL:        https://github.com/charkuils/nvim-soil #
--- ######################################################
-
 if vim.g.soil then
   return
 end
