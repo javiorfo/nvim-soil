@@ -9,19 +9,19 @@
 - This plugin has been developed on and for Linux following open source philosophy.
 
 ## Installation
-`Vim Plug`
-```vim
-Plug 'charkuils/nvim-soil'
-
-" Optional for puml syntax highlighting:
-Plug 'charkuils/nvim-whisky'
-```
 `Packer`
 ```lua
 use 'charkuils/nvim-soil'
 
 -- Optional for puml syntax highlighting:
 use 'charkuils/nvim-whisky'
+```
+`Lazy`
+```lua
+{ 'charkuils/nvim-soil', lazy = true }
+
+-- Optional for puml syntax highlighting:
+{ 'charkuils/nvim-whisky' }
 ```
 
 ## Configuration
