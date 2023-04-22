@@ -5,23 +5,23 @@
 ## Caveats
 - `Java` and `sxiv` are required to be installed in order to use this plugin.
 - `plantuml` is optional to be installed or used in jar format.
-- Recommended for Plant UML syntax highlighting [nvim-whisky colorscheme](https://github.com/javiorfo/nvim-whisky)
+- Recommended for Plant UML syntax highlighting [nvim-whisky colorscheme](https://github.com/charkuils/nvim-whisky)
 - This plugin has been developed on and for Linux following open source philosophy.
 
 ## Installation
 `Vim Plug`
 ```vim
-Plug 'javiorfo/nvim-soil'
+Plug 'charkuils/nvim-soil'
 
 " Optional for puml syntax highlighting:
-Plug 'javiorfo/nvim-whisky'
+Plug 'charkuils/nvim-whisky'
 ```
 `Packer`
 ```lua
-use 'javiorfo/nvim-soil'
+use 'charkuils/nvim-soil'
 
 -- Optional for puml syntax highlighting:
-use 'javiorfo/nvim-whisky'
+use 'charkuils/nvim-whisky'
 ```
 
 ## Configuration
@@ -51,6 +51,6 @@ require'soil'.setup{
 ## Screenshots
 ### Simple use
 
-<img src="https://github.com/javiorfo/img/blob/master/nvim-soil/soil2.gif?raw=true" alt="soil" style="width:1000px;"/>
+<img src="https://github.com/charkuils/img/blob/master/nvim-soil/soil2.gif?raw=true" alt="soil" style="width:1000px;"/>
 
-**NOTE:** The colorscheme **blend** from [nvim-whisky](https://github.com/javiorfo/nvim-whisky) is used in this image.
+**NOTE:** The colorscheme **blend** from [nvim-whisky](https://github.com/charkuils/nvim-whisky) is used in this image.
