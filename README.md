@@ -54,3 +54,7 @@ require'soil'.setup{
 <img src="https://github.com/charkuils/img/blob/master/nvim-soil/soil2.gif?raw=true" alt="soil" style="width:1000px;"/>
 
 **NOTE:** The colorscheme **blend** from [nvim-whisky](https://github.com/charkuils/nvim-whisky) is used in this image.
+
+## Support Charkuils' Work
+
+<img src="https://github.com/charkuils/img/blob/master/binance/BinancePayQR.png?raw=true" alt="binance" style="width:300px;"/>
