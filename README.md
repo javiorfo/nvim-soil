@@ -18,7 +18,7 @@ use 'javiorfo/nvim-whisky'
 ```
 `Lazy`
 ```lua
-{ 'javiorfo/nvim-soil', lazy = true }
+{ 'javiorfo/nvim-soil', lazy = true, ft = "plantuml" }
 
 -- Optional for puml syntax highlighting:
 { 'javiorfo/nvim-whisky' }
