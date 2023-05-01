@@ -3,7 +3,7 @@ local M = {}
 local function logger(plugin_name, msg)
     return function(level)
         if plugin_name then
-            msg = string.format("[%s] => %s", plugin_name, msg)
+            msg = string.format("  %s   %s", plugin_name, msg)
         end
         vim.notify(msg, level)
     end
