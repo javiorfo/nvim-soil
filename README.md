@@ -14,14 +14,14 @@
 use 'javiorfo/nvim-soil'
 
 -- Optional for puml syntax highlighting:
-use 'javiorfo/nvim-whisky'
+use 'javiorfo/nvim-nyctophilia'
 ```
 `Lazy`
 ```lua
 { 'javiorfo/nvim-soil', lazy = true, ft = "plantuml" }
 
 -- Optional for puml syntax highlighting:
-{ 'javiorfo/nvim-whisky' }
+{ 'javiorfo/nvim-nyctophilia' }
 ```
 
 ## Configuration
@@ -53,4 +53,4 @@ require'soil'.setup{
 
 <img src="https://github.com/javiorfo/img/blob/master/nvim-soil/soil2.gif?raw=true" alt="soil" style="width:1000px;"/>
 
-**NOTE:** The colorscheme **blend** from [nvim-whisky](https://github.com/javiorfo/nvim-whisky) is used in this image.
+**NOTE:** The colorscheme **nox** from [nvim-nyctophilia](https://github.com/javiorfo/nvim-nyctophilia) is used in this image.
