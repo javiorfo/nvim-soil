@@ -5,7 +5,7 @@
 ## Caveats
 - `Java` and `sxiv` are required to be installed in order to use this plugin.
 - `plantuml` is optional to be installed or used in jar format.
-- Recommended for Plant UML syntax highlighting [nvim-whisky colorscheme](https://github.com/javiorfo/nvim-whisky)
+- Recommended for Plant UML syntax highlighting [nvim-nyctophilia colorscheme](https://github.com/javiorfo/nvim-nyctophilia)
 - This plugin has been developed on and for Linux following open source philosophy.
 
 ## Installation
