@@ -54,3 +54,6 @@ require'soil'.setup{
 <img src="https://github.com/javiorfo/img/blob/master/nvim-soil/soil2.gif?raw=true" alt="soil" style="width:1000px;"/>
 
 **NOTE:** The colorscheme **nox** from [nvim-nyctophilia](https://github.com/javiorfo/nvim-nyctophilia) is used in this image.
+
+## Support
+- Binance: **Pay ID 546639204**
