@@ -25,11 +25,12 @@ local function get_image_command(file)
     return string.format("sxiv -b %s; echo $?", image_file)
 end
 
-local function execute_command(command)
+local function execute_command(command, error_msg)
+    error_msg = error_msg or "Execution error!"
     local result = vim.fn.system(command)
     if tonumber(result) ~= 0 then
         vim.cmd("redraw")
-        Logger:error("Execution error")
+        Logger:error(error_msg)
         do return end
     end
 end
@@ -58,6 +59,11 @@ function M.run()
     else
         Logger:warn("Install plantuml or download it from the official page and set it up with 'puml_jar' option.")
     end
+end
+
+function M.open_image()
+    local file = vim.fn.expand("%:p:r")
+    execute_command(get_image_command(file), "Image not found. Run :Soil command to generate it.")
 end
 
 return M

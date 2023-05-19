@@ -47,6 +47,7 @@ require'soil'.setup{
 - Open any yourfile.plantuml, yourfile.pu or yourfile.puml which you want to process and use `:Soil` Neovim command line to generate and open yourfile.png with graphical output. Press `q` to quit the image viewer.
 - Everytime you update a Plant UML file and run `:Soil`, you'll get an updated image.
 - The generated image is saved in the same location that your Plant UML file.
+- To open the generated image without run Plant UML again use `:SoilOpenImg` command.
 
 ## Screenshots
 ### Simple use
