@@ -5,23 +5,23 @@
 ## Caveats
 - `Java` and `sxiv` are required to be installed in order to use this plugin.
 - `plantuml` is optional to be installed or used in jar format.
-- Recommended for Plant UML syntax highlighting [nvim-nyctophilia colorscheme](https://github.com/charkuils/nvim-nyctophilia)
+- Recommended for Plant UML syntax highlighting [nvim-nyctophilia colorscheme](https://github.com/javiorfo/nvim-nyctophilia)
 - This plugin has been developed on and for Linux following open source philosophy.
 
 ## Installation
 `Packer`
 ```lua
-use 'charkuils/nvim-soil'
+use 'javiorfo/nvim-soil'
 
 -- Optional for puml syntax highlighting:
-use 'charkuils/nvim-nyctophilia'
+use 'javiorfo/nvim-nyctophilia'
 ```
 `Lazy`
 ```lua
-{ 'charkuils/nvim-soil', lazy = true, ft = "plantuml" }
+{ 'javiorfo/nvim-soil', lazy = true, ft = "plantuml" }
 
 -- Optional for puml syntax highlighting:
-{ 'charkuils/nvim-nyctophilia' }
+{ 'javiorfo/nvim-nyctophilia' }
 ```
 
 ## Configuration
@@ -52,9 +52,9 @@ require'soil'.setup{
 ## Screenshots
 ### Simple use
 
-<img src="https://github.com/charkuils/img/blob/master/nvim-soil/soil2.gif?raw=true" alt="soil" style="width:1000px;"/>
+<img src="https://github.com/javiorfo/img/blob/master/nvim-soil/soil2.gif?raw=true" alt="soil" style="width:1000px;"/>
 
-**NOTE:** The colorscheme **nox** from [nvim-nyctophilia](https://github.com/charkuils/nvim-nyctophilia) is used in this image.
+**NOTE:** The colorscheme **nox** from [nvim-nyctophilia](https://github.com/javiorfo/nvim-nyctophilia) is used in this image.
 
 ## Support
 - Binance: **Pay ID 546639204**
