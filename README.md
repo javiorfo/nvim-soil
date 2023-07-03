@@ -11,17 +11,17 @@
 ## Installation
 `Packer`
 ```lua
-use 'caosystema/nvim-soil'
+use 'javiorfo/nvim-soil'
 
 -- Optional for puml syntax highlighting:
-use 'caosystema/nvim-nyctophilia'
+use 'javiorfo/nvim-nyctophilia'
 ```
 `Lazy`
 ```lua
-{ 'caosystema/nvim-soil', lazy = true, ft = "plantuml" }
+{ 'javiorfo/nvim-soil', lazy = true, ft = "plantuml" }
 
 -- Optional for puml syntax highlighting:
-{ 'caosystema/nvim-nyctophilia' }
+{ 'javiorfo/nvim-nyctophilia' }
 ```
 
 ## Configuration
@@ -52,6 +52,6 @@ require'soil'.setup{
 ## Screenshots
 ### Simple use
 
-<img src="https://github.com/caosystema/img/blob/master/nvim-soil/soil2.gif?raw=true" alt="soil" style="width:1000px;"/>
+<img src="https://github.com/javiorfo/img/blob/master/nvim-soil/soil2.gif?raw=true" alt="soil" style="width:1000px;"/>
 
-**NOTE:** The colorscheme **nox** from [nvim-nyctophilia](https://github.com/caosystema/nvim-nyctophilia) is used in this image.
+**NOTE:** The colorscheme **nox** from [nvim-nyctophilia](https://github.com/javiorfo/nvim-nyctophilia) is used in this image.
