@@ -52,7 +52,7 @@ require'soil'.setup{
 ## Screenshots
 ### Simple use
 
-<img src="https://github.com/caosystema/img/blob/master/nvim-soil/soil2.gif?raw=true" alt="soil" style="width:1000px;"/>
+<img src="https://github.com/caosystema/img/blob/master/nvim-soil/soil2.gif?raw=true" alt="soil"/>
 
 **NOTE:** The colorscheme **nox** from [nvim-nyctophilia](https://github.com/caosystema/nvim-nyctophilia) is used in this image.
 
