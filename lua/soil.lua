@@ -4,7 +4,10 @@ local M = {}
 M.DEFAULTS = {
     image = {
         darkmode = false,
-        format = "png"
+        format = "png",
+        execute_to_open = function(img)
+            return "sxiv -b " .. img
+        end
     }
 }
 
@@ -28,6 +31,14 @@ function M.setup(opts)
                 M.DEFAULTS.image.darkmode = img.darkmode
             else
                 Logger:error("Setup Error: image.darkmode must be a boolean value.")
+            end
+        end
+
+        if img.execute_to_open then
+            if type(img.execute_to_open) == "function" then
+                M.DEFAULTS.image.execute_to_open = img.execute_to_open
+            else
+                Logger:error("Setup Error: image.execute_to_open must be a function.")
             end
         end
     end

@@ -3,6 +3,10 @@ local settings = require'soil'.DEFAULTS
 local M = {}
 
 local function validate()
+    local function validate_image_function()
+        return string.find(settings.image.execute_to_open(""), "sxiv")
+    end
+
     if vim.bo.filetype ~= "plantuml" then
         Logger:warn("This is not a Plant UML file.")
         return false
@@ -11,7 +15,7 @@ local function validate()
         Logger:warn("java is required. Install it to use this plugin.")
         return false
     end
-    if vim.fn.executable("sxiv") == 0 then
+    if vim.fn.executable("sxiv") == 0 and validate_image_function() then
         Logger:warn("sxiv is required. Install it to use this plugin.")
         return false
     end
@@ -20,9 +24,12 @@ end
 
 local function get_image_command(file)
     vim.cmd("redraw")
-    Logger:info(string.format("Image %s.%s generated!", file, settings.image.format))
     local image_file = string.format("%s.%s", file, settings.image.format)
-    return string.format("sxiv -b %s; echo $?", image_file)
+    if image_file == nil then
+        do return end
+    end
+    Logger:info(string.format("Image %s.%s generated!", file, settings.image.format))
+    return string.format("%s; echo $?", settings.image.execute_to_open(image_file))
 end
 
 local function execute_command(command, error_msg)
@@ -55,7 +62,7 @@ function M.run()
            local puml_command = string.format("java -jar %s %s -t%s %s; echo $?", puml_jar, file_with_extension, format, darkmode)
            execute_command(puml_command)
        end
-       execute_command(get_image_command(file))
+       execute_command(get_image_command(file), "Image not generated it.")
     else
         Logger:warn("Install plantuml or download it from the official page and set it up with 'puml_jar' option.")
     end

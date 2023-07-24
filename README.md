@@ -18,7 +18,14 @@ use 'javiorfo/nvim-nyctophilia'
 ```
 `Lazy`
 ```lua
-{ 'javiorfo/nvim-soil', lazy = true, ft = "plantuml" }
+{ 
+    'javiorfo/nvim-soil',
+    lazy = true,
+    ft = "plantuml",
+    config = function()
+        -- If you want to change default configurations
+    end
+}
 
 -- Optional for puml syntax highlighting:
 { 'javiorfo/nvim-nyctophilia' }
@@ -39,6 +46,15 @@ require'soil'.setup{
     image = {
         darkmode = false, -- Enable or disable darkmode 
         format = "png", -- Choose between png or svg
+
+        -- This is a default implementation of using xsiv for open the resultant image
+        -- Edit the string to use your preferred app to open the image
+        -- Some examples:
+        -- return "feh " .. img
+        -- return "xdg-open " .. img
+        execute_to_open = function(img) 
+            return "sxiv -b " .. img
+        end
     }
 }
 ```
