@@ -4,7 +4,7 @@ local M = {}
 
 local function validate()
     local function validate_image_function()
-        return string.find(settings.image.execute_to_open(""), "sxiv")
+        return string.find(settings.image.execute_to_open(""), "nsxiv")
     end
 
     if vim.bo.filetype ~= "plantuml" then
@@ -15,8 +15,8 @@ local function validate()
         Logger:warn("java is required. Install it to use this plugin.")
         return false
     end
-    if vim.fn.executable("sxiv") == 0 and validate_image_function() then
-        Logger:warn("sxiv is required. Install it to use this plugin.")
+    if vim.fn.executable("nsxiv") == 0 and validate_image_function() then
+        Logger:warn("nsxiv is required. Install it to use this plugin.")
         return false
     end
     return true
