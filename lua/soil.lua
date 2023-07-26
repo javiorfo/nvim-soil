@@ -6,7 +6,7 @@ M.DEFAULTS = {
         darkmode = false,
         format = "png",
         execute_to_open = function(img)
-            return "sxiv -b " .. img
+            return "nsxiv -b " .. img
         end
     }
 }
