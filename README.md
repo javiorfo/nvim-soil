@@ -3,7 +3,7 @@
 *nvim-soil is a minimal plugin written in Lua for Plant UML.*
 
 ## Caveats
-- `Java` and `sxiv` (default but editable) are required to be installed in order to use this plugin.
+- `Java` and `nsxiv` (default but editable) are required to be installed in order to use this plugin.
 - `plantuml` is optional to be installed or used in jar format.
 - Recommended for Plant UML syntax highlighting [nvim-nyctophilia colorscheme](https://github.com/javiorfo/nvim-nyctophilia)
 - This plugin has been developed on and for Linux following open source philosophy.
@@ -47,13 +47,13 @@ require'soil'.setup{
         darkmode = false, -- Enable or disable darkmode 
         format = "png", -- Choose between png or svg
 
-        -- This is a default implementation of using xsiv to open the resultant image
+        -- This is a default implementation of using nsxiv to open the resultant image
         -- Edit the string to use your preferred app to open the image
         -- Some examples:
         -- return "feh " .. img
         -- return "xdg-open " .. img
         execute_to_open = function(img) 
-            return "sxiv -b " .. img
+            return "nsxiv -b " .. img
         end
     }
 }
