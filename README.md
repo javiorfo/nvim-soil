@@ -5,21 +5,21 @@
 ## Caveats
 - `Java` and `nsxiv` (default but editable) are required to be installed in order to use this plugin.
 - `plantuml` is optional to be installed or used in jar format.
-- Recommended for Plant UML syntax highlighting [nvim-nyctophilia colorscheme](https://github.com/javiorfo/nvim-nyctophilia)
+- Recommended for Plant UML syntax highlighting [nvim-nyctophilia colorscheme](https://github.com/orfosys/nvim-nyctophilia)
 - This plugin has been developed on and for Linux following open source philosophy.
 
 ## Installation
 `Packer`
 ```lua
-use 'javiorfo/nvim-soil'
+use 'orfosys/nvim-soil'
 
 -- Optional for puml syntax highlighting:
-use 'javiorfo/nvim-nyctophilia'
+use 'orfosys/nvim-nyctophilia'
 ```
 `Lazy`
 ```lua
 { 
-    'javiorfo/nvim-soil',
+    'orfosys/nvim-soil',
     lazy = true,
     ft = "plantuml",
     config = function()
@@ -28,7 +28,7 @@ use 'javiorfo/nvim-nyctophilia'
 }
 
 -- Optional for puml syntax highlighting:
-{ 'javiorfo/nvim-nyctophilia' }
+{ 'orfosys/nvim-nyctophilia' }
 ```
 
 ## Configuration
@@ -68,11 +68,11 @@ require'soil'.setup{
 ## Screenshots
 ### Simple use
 
-<img src="https://github.com/javiorfo/img/blob/master/nvim-soil/soil2.gif?raw=true" alt="soil"/>
+<img src="https://github.com/orfosys/img/blob/master/nvim-soil/soil2.gif?raw=true" alt="soil"/>
 
-**NOTE:** The colorscheme **nox** from [nvim-nyctophilia](https://github.com/javiorfo/nvim-nyctophilia) is used in this image.
+**NOTE:** The colorscheme **nox** from [nvim-nyctophilia](https://github.com/orfosys/nvim-nyctophilia) is used in this image.
 
 ---
 
 ### Donate
-- [Paypal](https://www.paypal.com/donate/?hosted_button_id=FA7SGLSCT2H8G)
+- [Binance](https://raw.githubusercontent.com/orfosys/img/master/binance/BinancePayQR.png)
