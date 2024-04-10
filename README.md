@@ -20,15 +20,17 @@ use 'javiorfo/nvim-nyctophilia'
 ```lua
 { 
     'javiorfo/nvim-soil',
+
+    -- Optional for puml syntax highlighting:
+    dependencies = { 'javiorfo/nvim-nyctophilia' }
+
     lazy = true,
     ft = "plantuml",
     config = function()
-        -- If you want to change default configurations
+        -- If you want to change default configurations (see Configuration section)
+        -- require'soil'.setup { ... }
     end
 }
-
--- Optional for puml syntax highlighting:
-{ 'javiorfo/nvim-nyctophilia' }
 ```
 
 ## Configuration
@@ -48,7 +50,7 @@ require'soil'.setup{
         format = "png", -- Choose between png or svg
 
         -- This is a default implementation of using nsxiv to open the resultant image
-        -- Edit the string to use your preferred app to open the image
+        -- Edit the string to use your preferred app to open the image (as if it were a command line)
         -- Some examples:
         -- return "feh " .. img
         -- return "xdg-open " .. img
