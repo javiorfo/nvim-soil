@@ -24,11 +24,11 @@ end
 
 local function get_image_command(file)
     vim.cmd("redraw")
-    local image_file = string.format("%s.%s", file, settings.image.format)
+    local image_file = string.format("'%s.%s'", file, settings.image.format)
     if image_file == nil then
         do return end
     end
-    Logger:info(string.format("Image %s.%s generated!", file, settings.image.format))
+    Logger:info(string.format("Image %s generated!", image_file))
     return string.format("%s; echo $?", settings.image.execute_to_open(image_file))
 end
 
@@ -49,7 +49,7 @@ function M.run()
     local puml_jar = settings.puml_jar
 
     if cli_puml ~= 0 or puml_jar then
-       local file_with_extension = vim.fn.expand("%:p")
+       local file_with_extension = "'" .. vim.fn.expand("%:p") .. "'"
        local file = vim.fn.expand("%:p:r")
        local format = settings.image.format
        local darkmode = settings.image.darkmode and "-darkmode" or ""
