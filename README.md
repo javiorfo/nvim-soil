@@ -22,11 +22,11 @@ use 'javiorfo/nvim-nyctophilia'
     'javiorfo/nvim-soil',
 
     -- Optional for puml syntax highlighting:
-    dependencies = { 'javiorfo/nvim-nyctophilia' }
+    dependencies = { 'javiorfo/nvim-nyctophilia' },
 
     lazy = true,
     ft = "plantuml",
-    opts = }
+    opts = {
         -- If you want to change default configurations
         
         -- If you want to use Plant UML jar version instead of the install version
