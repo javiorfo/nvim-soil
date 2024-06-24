@@ -34,7 +34,7 @@ use 'javiorfo/nvim-nyctophilia'
         
         -- If you want to customize the image showed when running this plugin
         image = {
-            darkmode = false, -- Enable or disable darkmode 
+            darkmode = false, -- Enable or disable darkmode
             format = "png", -- Choose between png or svg
     
             -- This is a default implementation of using nsxiv to open the resultant image
