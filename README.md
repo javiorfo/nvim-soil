@@ -5,24 +5,24 @@
 ## Caveats
 - `Java` and `nsxiv` (default but editable) are required to be installed in order to use this plugin.
 - `plantuml` is optional to be installed or used in jar format.
-- Recommended for Plant UML syntax highlighting [nvim-nyctophilia colorscheme](https://github.com/chaosystema/nvim-nyctophilia)
+- Recommended for Plant UML syntax highlighting [nvim-nyctophilia colorscheme](https://github.com/javiorfo/nvim-nyctophilia)
 - This plugin has been developed on and for Linux following open source philosophy.
 
 ## Installation
 `Packer`
 ```lua
-use 'chaosystema/nvim-soil'
+use 'javiorfo/nvim-soil'
 
 -- Optional for puml syntax highlighting:
-use 'chaosystema/nvim-nyctophilia'
+use 'javiorfo/nvim-nyctophilia'
 ```
 `Lazy`
 ```lua
 { 
-    'chaosystema/nvim-soil',
+    'javiorfo/nvim-soil',
 
     -- Optional for puml syntax highlighting:
-    dependencies = { 'chaosystema/nvim-nyctophilia' },
+    dependencies = { 'javiorfo/nvim-nyctophilia' },
 
     lazy = true,
     ft = "plantuml",
@@ -87,11 +87,12 @@ require'soil'.setup{
 ## Screenshots
 ### Simple use
 
-<img src="https://github.com/chaosystema/img/blob/master/nvim-soil/soil2.gif?raw=true" alt="nvim-soil"/>
+<img src="https://github.com/javiorfo/img/blob/master/nvim-soil/soil2.gif?raw=true" alt="nvim-soil"/>
 
-**NOTE:** The colorscheme **nox** from [nvim-nyctophilia](https://github.com/chaosystema/nvim-nyctophilia) is used in this image.
+**NOTE:** The colorscheme **nox** from [nvim-nyctophilia](https://github.com/javiorfo/nvim-nyctophilia) is used in this image.
 
 ---
 
 ### Donate
-- **Bitcoin** [(QR)](https://raw.githubusercontent.com/chaosystema/img/master/crypto/bitcoin.png)  `1GqdJ63RDPE4eJKujHi166FAyigvHu5R7v`
+- **Bitcoin** [(QR)](https://raw.githubusercontent.com/javiorfo/img/master/crypto/bitcoin.png)  `1GqdJ63RDPE4eJKujHi166FAyigvHu5R7v`
+- [Paypal](https://www.paypal.com/donate/?hosted_button_id=FA7SGLSCT2H8G)
