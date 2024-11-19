@@ -29,7 +29,7 @@ local function get_image_command(file)
         do return end
     end
     Logger:info(string.format("Image %s.%s generated!", file, settings.image.format))
-    return string.format("%s; echo $?", settings.image.execute_to_open(image_file))
+    return string.format("sh -c '%s; echo $?'", settings.image.execute_to_open(image_file))
 end
 
 local function execute_command(command, error_msg)
