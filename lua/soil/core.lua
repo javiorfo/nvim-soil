@@ -1,5 +1,5 @@
-local Logger = require'soil.logger':new("Soil")
-local settings = require'soil'.DEFAULTS
+local Logger = require 'soil.logger':new("Soil")
+local settings = require 'soil'.DEFAULTS
 local M = {}
 
 local function validate()
@@ -29,7 +29,7 @@ local function get_image_command(file)
         do return end
     end
     Logger:info(string.format("Image %s.%s generated!", file, settings.image.format))
-    return string.format("%s; echo $?", settings.image.execute_to_open(image_file))
+    return string.format("sh -c '%s; echo $?'", settings.image.execute_to_open(image_file))
 end
 
 local function execute_command(command, error_msg)
@@ -49,20 +49,21 @@ function M.run()
     local puml_jar = settings.puml_jar
 
     if cli_puml ~= 0 or puml_jar then
-       local file_with_extension = vim.fn.expand("%:p")
-       local file = vim.fn.expand("%:p:r")
-       local format = settings.image.format
-       local darkmode = settings.image.darkmode and "-darkmode" or ""
+        local file_with_extension = vim.fn.expand("%:p")
+        local file = vim.fn.expand("%:p:r")
+        local format = settings.image.format
+        local darkmode = settings.image.darkmode and "-darkmode" or ""
 
-       Logger:info("Building...")
-       if cli_puml ~= 0 then
-           local puml_command = string.format("plantuml %s -t%s %s", file_with_extension, format, darkmode)
-           execute_command(puml_command)
-       else
-           local puml_command = string.format("java -jar %s %s -t%s %s; echo $?", puml_jar, file_with_extension, format, darkmode)
-           execute_command(puml_command)
-       end
-       execute_command(get_image_command(file), "Image not generated it.")
+        Logger:info("Building...")
+        if cli_puml ~= 0 then
+            local puml_command = string.format("plantuml %s -t%s %s", file_with_extension, format, darkmode)
+            execute_command(puml_command)
+        else
+            local puml_command = string.format("java -jar %s %s -t%s %s; echo $?", puml_jar, file_with_extension, format,
+                darkmode)
+            execute_command(puml_command)
+        end
+        execute_command(get_image_command(file), "Image not generated it.")
     else
         Logger:warn("Install plantuml or download it from the official page and set it up with 'puml_jar' option.")
     end
