@@ -1,7 +1,10 @@
-local Logger = require'soil.logger':new("Soil")
+local Logger = require 'soil.logger':new("Soil")
 local M = {}
 
 M.DEFAULTS = {
+    actions = {
+        redraw = false
+    },
     image = {
         darkmode = false,
         format = "png",
@@ -14,6 +17,12 @@ M.DEFAULTS = {
 function M.setup(opts)
     if opts.puml_jar then
         M.DEFAULTS.puml_jar = opts.puml_jar
+    end
+    if opts.actions then
+        local actions = opts.actions
+        if actions.redraw ~= nil and type(actions.redraw) == "boolean" and actions.redraw then
+            M.DEFAULTS.actions.redraw = true
+        end
     end
     if opts.image then
         local img = opts.image

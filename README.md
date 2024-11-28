@@ -28,8 +28,14 @@ use 'javiorfo/nvim-nyctophilia'
     ft = "plantuml",
     opts = {
         -- If you want to change default configurations
-        
-        -- If you want to use Plant UML jar version instead of the install version
+
+        -- This option closes the image viewer and reopen the image generated
+        -- When true this offers some kind of online updating (like plantuml web server)
+        actions = {
+            redraw = false 
+        }
+
+        -- If you want to use Plant UML jar version instead of the installed version
         puml_jar = "/path/to/plantuml.jar",
         
         -- If you want to customize the image showed when running this plugin
@@ -51,32 +57,11 @@ use 'javiorfo/nvim-nyctophilia'
 ```
 
 ## Configuration
-#### This is OPTIONAL
+#### Defaults
 - If `plantuml` is installed you don't need any extra set up. But if wanted to use **plantuml jar version** you can set it up.
 - The default image format is **PNG**. 
+- The default action redraw format is **false**. 
 - The default Plant UML **darkmode** is set to **false**. 
-- Optional configuration in *init.vim* or *init.lua*:
-```lua
-require'soil'.setup{ 
-    -- If you want to use Plant UML jar version instead of the install version
-    puml_jar = "/path/to/plantuml.jar",
-    
-    -- If you want to customize the image showed when running this plugin
-    image = {
-        darkmode = false, -- Enable or disable darkmode 
-        format = "png", -- Choose between png or svg
-
-        -- This is a default implementation of using nsxiv to open the resultant image
-        -- Edit the string to use your preferred app to open the image (as if it were a command line)
-        -- Some examples:
-        -- return "feh " .. img
-        -- return "xdg-open " .. img
-        execute_to_open = function(img) 
-            return "nsxiv -b " .. img
-        end
-    }
-}
-```
 
 ## Usage
 - Open any yourfile.plantuml, yourfile.pu or yourfile.puml which you want to process and use `:Soil` Neovim command line to generate and open yourfile.png with graphical output. Press `q` to quit the image viewer.

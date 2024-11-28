@@ -42,6 +42,11 @@ local function execute_command(command, error_msg)
     end
 end
 
+local function redraw()
+    local img = string.format("%s.%s", vim.fn.expand("%:r"), settings.image.format)
+    os.execute(string.format("ps aux | grep -m 1 %s | awk '{print $2}' | xargs kill -9", img))
+end
+
 function M.run()
     if not validate() then return end
 
@@ -57,10 +62,16 @@ function M.run()
         Logger:info("Building...")
         if cli_puml ~= 0 then
             local puml_command = string.format("plantuml %s -t%s %s", file_with_extension, format, darkmode)
+            if settings.actions.redraw then
+                redraw()
+            end
             execute_command(puml_command)
         else
             local puml_command = string.format("java -jar %s %s -t%s %s; echo $?", puml_jar, file_with_extension, format,
                 darkmode)
+            if settings.actions.redraw then
+                redraw()
+            end
             execute_command(puml_command)
         end
         execute_command(get_image_command(file), "Image not generated it.")
