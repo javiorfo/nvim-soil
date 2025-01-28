@@ -33,7 +33,7 @@ use 'javiorfo/nvim-nyctophilia'
         -- When true this offers some kind of online updating (like plantuml web server)
         actions = {
             redraw = false 
-        }
+        },
 
         -- If you want to use Plant UML jar version instead of the installed version
         puml_jar = "/path/to/plantuml.jar",
