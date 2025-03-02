@@ -47,6 +47,29 @@ local function redraw()
     os.execute(string.format("ps aux | grep -m 1 %s | awk '{print $2}' | xargs kill -9", img))
 end
 
+local function check_for_startuml_filename()
+    -- Get the full path of the current file without extension
+    local current_file = vim.fn.expand("%:p:r")
+
+    -- Open the current file for reading
+    local file = io.open(vim.fn.expand("%:p"), "r")
+    if not file then
+        error("Failed to open file")
+    end
+
+    -- Read the first line of the file
+    local first_line = file:read("*l")
+    file:close()
+
+    -- Check if the first line contains @startuml "filename"
+    local startuml_filename = first_line:match('@startuml%s+"(.-)"')
+    local new_filename = current_file
+    if startuml_filename then
+        new_filename = current_file:gsub("(.-)([a-z-_]+)$", '"%1' .. startuml_filename .. '"')
+    end
+    return new_filename
+end
+
 function M.run()
     if not validate() then return end
 
@@ -55,9 +78,14 @@ function M.run()
 
     if cli_puml ~= 0 or puml_jar then
         local file_with_extension = vim.fn.expand("%:p")
-        local file = vim.fn.expand("%:p:r")
+        local file = check_for_startuml_filename()
         local format = settings.image.format
         local darkmode = settings.image.darkmode and "-darkmode" or ""
+		local shell = os.getenv("SHELL") .. ""
+		local statusOperator = "$?"
+		if string.find(shell, "fish") then
+			statusOperator = "$status"
+		end
 
         Logger:info("Building...")
         if cli_puml ~= 0 then
@@ -67,8 +95,14 @@ function M.run()
             end
             execute_command(puml_command)
         else
-            local puml_command = string.format("java -jar %s %s -t%s %s; echo $?", puml_jar, file_with_extension, format,
-                darkmode)
+            local puml_command = string.format(
+                "java -jar %s %s -t%s %s; echo %s",
+                puml_jar,
+                file_with_extension,
+                format,
+                darkmode,
+                statusOperator
+            )
             if settings.actions.redraw then
                 redraw()
             end
@@ -81,7 +115,7 @@ function M.run()
 end
 
 function M.open_image()
-    local file = vim.fn.expand("%:p:r")
+    local file = check_for_startuml_filename()
     execute_command(get_image_command(file), "Image not found. Run :Soil command to generate it.")
 end
 
