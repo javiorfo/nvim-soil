@@ -81,6 +81,11 @@ function M.run()
         local file = check_for_startuml_filename()
         local format = settings.image.format
         local darkmode = settings.image.darkmode and "-darkmode" or ""
+		local shell = os.getenv("SHELL") .. ""
+		local statusOperator = "$?"
+		if string.find(shell, "fish") then
+			statusOperator = "$status"
+		end
 
         Logger:info("Building...")
         if cli_puml ~= 0 then
@@ -90,8 +95,14 @@ function M.run()
             end
             execute_command(puml_command)
         else
-            local puml_command = string.format("java -jar %s %s -t%s %s; echo $?", puml_jar, file_with_extension, format,
-                darkmode)
+            local puml_command = string.format(
+                "java -jar %s %s -t%s %s; echo %s",
+                puml_jar,
+                file_with_extension,
+                format,
+                darkmode,
+                statusOperator
+            )
             if settings.actions.redraw then
                 redraw()
             end
