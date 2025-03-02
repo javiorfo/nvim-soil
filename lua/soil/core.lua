@@ -65,7 +65,7 @@ local function check_for_startuml_filename()
     local startuml_filename = first_line:match('@startuml%s+"(.-)"')
     local new_filename = current_file
     if startuml_filename then
-        new_filename = current_file:gsub("(.-)([a-z-_]+)$", '"%1' .. startuml_filename .. '"')
+        new_filename = current_file:gsub("(.-)([%w-_]+)$", '"%1' .. startuml_filename .. '"')
     end
     return new_filename
 end
@@ -78,7 +78,6 @@ function M.run()
 
     if cli_puml ~= 0 or puml_jar then
         local file_with_extension = vim.fn.expand("%:p")
-        local file = check_for_startuml_filename()
         local format = settings.image.format
         local darkmode = settings.image.darkmode and "-darkmode" or ""
 		local shell = os.getenv("SHELL") .. ""
@@ -108,6 +107,7 @@ function M.run()
             end
             execute_command(puml_command)
         end
+        local file = check_for_startuml_filename()
         execute_command(get_image_command(file), "Image not generated it.")
     else
         Logger:warn("Install plantuml or download it from the official page and set it up with 'puml_jar' option.")
