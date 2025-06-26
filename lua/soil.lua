@@ -21,7 +21,7 @@ function M.setup(opts)
     if opts.actions then
         local actions = opts.actions
         if actions.redraw ~= nil and type(actions.redraw) == "boolean" and actions.redraw then
-            M.DEFAULTS.actions.redraw = true
+            M.DEFAULTS.actions.redraw = actions.redraw
         end
     end
     if opts.image then
